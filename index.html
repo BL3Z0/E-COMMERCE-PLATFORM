@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GROUP A Clothing Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>GROUP A Clothing Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="products">
+            <!-- Clothing -->
+            <div class="product">
+                <img src="products/shirt1.jpg" alt="Shirt">
+                <h2>Men's Casual Shirt</h2>
+                <p>₦5,000</p>
+                <button onclick="addToCart(1, 'Men\'s Casual Shirt', 5000)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="products/dress1.jpg" alt="Dress">
+                <h2>Women's Summer Dress</h2>
+                <p>₦7,500</p>
+                <button onclick="addToCart(2, 'Women\'s Summer Dress', 7500)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="products/jeans1.jpg" alt="Jeans">
+                <h2>Men's Denim Jeans</h2>
+                <p>₦6,000</p>
+                <button onclick="addToCart(3, 'Men\'s Denim Jeans', 6000)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="products/hoodie1.jpg" alt="Hoodie">
+                <h2>Unisex Hoodie</h2>
+                <p>₦8,000</p>
+                <button onclick="addToCart(4, 'Unisex Hoodie', 8000)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="products/jacket1.jpg" alt="Jacket">
+                <h2>Men's Leather Jacket</h2>
+                <p>₦15,000</p>
+                <button onclick="addToCart(5, 'Men\'s Leather Jacket', 15000)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="products/skirt1.jpg" alt="Skirt">
+                <h2>Women's Pencil Skirt</h2>
+                <p>₦6,500</p>
+                <button onclick="addToCart(6, 'Women\'s Pencil Skirt', 6500)">Add to Cart</button>
+            </div>
+
+            <!-- Shoes -->
+            <div class="product">
+                <img src="products/sneakers1.jpg" alt="Sneakers">
+                <h2>Men's Sneakers</h2>
+                <p>₦12,000</p>
+                <button onclick="addToCart(7, 'Men\'s Sneakers', 12000)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="products/heels1.jpg" alt="Heels">
+                <h2>Women's Heels</h2>
+                <p>₦10,000</p>
+                <button onclick="addToCart(8, 'Women\'s Heels', 10000)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="products/sandals1.jpg" alt="Sandals">
+                <h2>Unisex Sandals</h2>
+                <p>₦4,500</p>
+                <button onclick="addToCart(9, 'Unisex Sandals', 4500)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="products/boots1.jpg" alt="Boots">
+                <h2>Men's Boots</h2>
+                <p>₦14,000</p>
+                <button onclick="addToCart(10, 'Men\'s Boots', 14000)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="products/flats1.jpg" alt="Flats">
+                <h2>Women's Flats</h2>
+                <p>₦8,500</p>
+                <button onclick="addToCart(11, 'Women\'s Flats', 8500)">Add to Cart</button>
+            </div>
+
+            <!-- Jewelry -->
+            <div class="product">
+                <img src="products/necklace1.jpg" alt="Necklace">
+                <h2>Gold Necklace</h2>
+                <p>₦25,000</p>
+                <button onclick="addToCart(12, 'Gold Necklace', 25000)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="products/earrings1.jpg" alt="Earrings">
+                <h2>Diamond Earrings</h2>
+                <p>₦18,000</p>
+                <button onclick="addToCart(13, 'Diamond Earrings', 18000)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="products/bracelet1.jpg" alt="Bracelet">
+                <h2>Silver Bracelet</h2>
+                <p>₦15,000</p>
+                <button onclick="addToCart(14, 'Silver Bracelet', 15000)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="products/ring1.jpg" alt="Ring">
+                <h2>Gold Ring</h2>
+                <p>₦12,000</p>
+                <button onclick="addToCart(15, 'Gold Ring', 12000)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="products/watch1.jpg" alt="Watch">
+                <h2>Men's Watch</h2>
+                <p>₦30,000</p>
+                <button onclick="addToCart(16, 'Men\'s Watch', 30000)">Add to Cart</button>
+            </div>
+        </section>
+
+        <section class="cart">
+            <h2>Shopping Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: ₦<span id="cart-total">0</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 GROUP A Clothing Store. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
